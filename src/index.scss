@@ -1,6 +1,12 @@
 @import './sass/Caroussel.scss';
 
-$primary-color: rgb(82, 77, 77);
+
+@font-face {
+  font-family: 'Varela';
+  src: url(./sass/fonts/VarelaRound-Regular.ttf);
+}
+
+$primary-color: rgb(222, 222, 222);
 
 body {
   background-color: $primary-color;

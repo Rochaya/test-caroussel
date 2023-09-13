@@ -1,0 +1,34 @@
+{
+  "slider": [
+    {
+      "title": "Image 1",
+      "description": "Description de l'image 1",
+      "url": "img/image1.jpg"
+    },
+    {
+      "title": "Image 2",
+      "description": "Description de l'image 2",
+      "url": "img/image2.jpg"
+    },
+    {
+      "title": "Image 3",
+      "description": "Description de l'image 3",
+      "url": "img/image3.jpg"
+    },
+    {
+      "title": "Image 4",
+      "description": "Description de l'image 4",
+      "url": "img/image4.jpg"
+    },
+    {
+      "title": "Image 5",
+      "description": "Description de l'image 5",
+      "url": "img/image5.jpg"
+    },
+    {
+      "title": "Image 6",
+      "description": "Description de l'image 6",
+      "url": "img/image6.jpg"
+    }
+  ]
+}
