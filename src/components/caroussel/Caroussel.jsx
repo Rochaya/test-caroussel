@@ -29,11 +29,26 @@ export default function Caroussel() {
           rotate: 0,
           stretch: 0,
           depth: 100,
-          modifier: 2,
+          modifier: 2
         }}
         loop={true}
         pagination={{clickable: true}}
-        slidesPerView={2}
+        slidesPerView={1}
+        autoplay={{
+          delay: 3200,
+          disableOnInteraction: false
+        }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1
+          },
+          768: {
+            slidesPerView: 1
+          },
+          1024: {
+            slidesPerView: 2
+          }
+        }}
       
       >
         {
