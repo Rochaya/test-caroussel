@@ -25,6 +25,13 @@ export default function Caroussel() {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
+        style={{
+          "--swiper-pagination-color": "#008a05",
+          "--swiper-pagination-bullet-inactive-color": "#ffffff",
+          "--swiper-pagination-bullet-inactive-opacity": "1",
+          "--swiper-pagination-bullet-size": "0.6rem",
+          "--swiper-pagination-bullet-horizontal-gap": "0.3rem"
+        }}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -33,6 +40,7 @@ export default function Caroussel() {
         }}
         loop={true}
         pagination={{clickable: true}}
+        spaceBetween={40}
         slidesPerView={1}
         autoplay={{
           delay: 3200,
@@ -43,7 +51,7 @@ export default function Caroussel() {
             slidesPerView: 1
           },
           768: {
-            slidesPerView: 1
+            slidesPerView: 2
           },
           1024: {
             slidesPerView: 2
