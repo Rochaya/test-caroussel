@@ -60,6 +60,69 @@
     color: #00aa22;
 }
 
+.btn-show-service {
+    display: inline-block;
+    color: #000000;
+    background: #fff;
+    width: 150px;
+    padding: 0.625rem 1.875rem;
+    margin-top: 2.125rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #000000;
+    border-radius: 3.125rem;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-show-service:hover {
+    border: 0.125rem solid #6de46f;
+    color: #00aa22;
+}
+
+.swiper {
+    width: 100%;
+    height: 550px;
+    // border: 1px blue solid;
+}
+
+.swiper-slider {
+    width: 350px;
+    height: 28.125rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 3.125rem;
+}
+
+.swiper-slider h2 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.4;
+    margin-bottom: 0.625rem;
+    padding: 0 0 0 1.563rem;
+    text-transform: uppercase;
+}
+
+.swiper-slider div {
+    display: none;
+    opacity: 0;
+    padding-bottom: 20px;
+}
+
+.swiper-slide-active div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    opacity: 1;
+    height: 100%;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+    background: #fff;
+    color: #00aa22;
+}
+
 
 @media screen and (min-width: 768px) {
     .caroussel {

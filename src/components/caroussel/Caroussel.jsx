@@ -1,19 +1,15 @@
 import React from 'react'
-import { useEffect } from 'react'
-import { useState } from 'react'
-import imagesData from './data-images/images.json';
+import imagesData from './data-images/images.json'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, EffectCoverflow, Autoplay } from 'swiper/modules'
+import 'swiper/css';
+import 'swiper/css/bundle';
 
 
 
 export default function Caroussel() {
-  const [imgData, setImgData] = useState(imagesData.slider);
+  const imgData  = imagesData.slider;
   
-  useEffect(() => {
-    
-  }, []);
-
-
-
   return (
     <div className='caroussel'>
       <div className='content-caroussel'>
@@ -23,15 +19,35 @@ export default function Caroussel() {
         <a href="#" className='btn-contact-service'>Nous contacter</a>
       </div>
 
-      <div className="carousel">
-        {imgData.map((item, index) => (
-          <div key={index} className="carousel-slide">
-            <img src={item.url} alt={item.title} />
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          </div>
-        ))}
-      </div>
+      <Swiper  
+        className='swiper'
+        modules={[Pagination, EffectCoverflow, Autoplay]}
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2,
+        }}
+        loop={true}
+        pagination={{clickable: true}}
+        slidesPerView={2}
+      
+      >
+        {
+          imgData.map((data, i) => (
+            <SwiperSlide key={i} style={{ backgroundImage: `url(${data.url})` }} className="swiper-slider">
+                <div>
+                    <h2>{data.title}</h2>
+                    <p>{data.description}</p>
+                    <a href="#" className='btn-show-service'>Parcourir</a>
+                </div>
+            </SwiperSlide>
+          ))
+        }
+      </Swiper>
     </div>
   )
 }
